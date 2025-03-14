@@ -344,7 +344,7 @@ main(int argc, char* argv[])
     std::vector<NetDeviceContainer> R2T2;
     R2T2.reserve(20);
 
-    // Make connetions
+    // Make connections
     NetDeviceContainer T1T2 = pointToPointT.Install(T1, T2);
     NetDeviceContainer R1T2 = pointToPointSR.Install(R1, T2);
 
