@@ -343,9 +343,12 @@ main(int argc, char* argv[])
     S3T2.reserve(10);
     std::vector<NetDeviceContainer> R2T2;
     R2T2.reserve(20);
+
+    // Make connetions
     NetDeviceContainer T1T2 = pointToPointT.Install(T1, T2);
     NetDeviceContainer R1T2 = pointToPointSR.Install(R1, T2);
 
+    // Make the machines connected to each of the switch.
     for (std::size_t i = 0; i < 10; i++)
     {
         Ptr<Node> n = S1.Get(i);
